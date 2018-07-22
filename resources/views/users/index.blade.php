@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tasks Index')
+@section('title', 'Users Index')
 
 @section('content')
 
@@ -9,15 +9,15 @@
         <thead>
         <tr>
             <th>Name</th>
-            <th>Assigned To</th>
+            <th>Tasks</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($tasks as $task)
-            <tr>
-                <td>{{ $task->name }}</td>
-                <td>{{ $task->user->name }}</td>
-            </tr>
+        @foreach($users as $user)
+        <tr>
+            <td>{{ $user->name }}</td>
+            <td>{{ count($user->tasks) }}</td>
+        </tr>
         @endforeach
         </tbody>
     </table>
