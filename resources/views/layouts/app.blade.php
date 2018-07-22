@@ -19,20 +19,22 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Laravel</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/tasks" name="tasks">Tasks</a></li>
-                <li><a href="/widgets" name="tasks">Widgets</a></li>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Laravel</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/tasks">Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/widgets">Widgets</a>
+                </li>
             </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+        </div>
+    </nav>
+</div>
 
 <div class="container theme-showcase" role="main">
     @yield('content')
