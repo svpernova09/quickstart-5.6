@@ -1,0 +1,19 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /path/to/quickstart-5.6
+        to: /home/vagrant/qs
+sites:
+    -
+        map: qs.test
+        to: /home/vagrant/qs/public
+databases:
+    - homestead
+name: qs
+hostname: qs
